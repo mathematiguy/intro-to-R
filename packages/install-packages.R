@@ -14,16 +14,12 @@
 #' a package from a local source file (rather than remotely via CRAN).
 #'
 
-
-# install dependencies for readxl from CRAN
-install.packages("cellranger")
+# install tidyverse dependencies from CRAN
+install.packages(c("cellranger", 'cli', 'dbplyr', 'forcats', 'ggplot2', 'haven',
+                   'modelr', 'reprex', 'rvest', 'tidyr'))
 
 # install readxl from source <- this is a dependency for tidyverse
 install.packages("packages/readxl_1.0.0.tar.gz", source = TRUE, repos = NULL)
-
-# install other dependencies for tidyverse from CRAN
-install.packages(c('cli', 'dbplyr', 'forcats', 'ggplot2', 'haven', 'modelr', 
-                   'reprex', 'rvest', 'tidyr'))
 
 # install tidyverse from source
 install.packages("packages/tidyverse_1.2.1.tar.gz", source = TRUE, repos = NULL)
